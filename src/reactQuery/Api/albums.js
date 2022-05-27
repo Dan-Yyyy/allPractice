@@ -3,8 +3,9 @@ import * as axios from 'axios';
 axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com/';
  
 export const albums = {
-  albums() {
-    return axios.get(`albums`)
+  albums({queryKey}) {
+    const [ , , id] = queryKey;
+    return axios.get(`albums/${id}`)
     .then(response => {
       return response.data
     })
