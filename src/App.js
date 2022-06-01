@@ -1,10 +1,12 @@
 import './App.css';
-import ReactQuery from './reactQuery/ReactQuery';
+import PokemonPage from './pokemons/PokemonPage';
+// import ReactQuery from './reactQuery/ReactQuery';
 
 function App() {
   return (
     <div className="App">
-      <ReactQuery/>
+      {/* <ReactQuery/> */}
+      <PokemonPage/>
     </div>
   );
 }

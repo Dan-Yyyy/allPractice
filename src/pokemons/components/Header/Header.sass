@@ -1,0 +1,58 @@
+@import "./../../variables.sass"
+
+.header__container
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.header__logo
+  display: flex
+  align-items: center
+  text-decoration: none
+  color: $mainColor
+
+  span
+    margin-left: 16px
+    font-family: "Poppins-Bold"
+    font-size: 24px
+
+.header__filter
+  cursor: pointer
+
+.search
+  position: relative
+  width: 100%
+  margin-top: 8px
+
+  input
+    display: block
+    width: 100%
+    padding: 4px 8px 4px 24px
+    border-radius: 8px
+    outline: none
+    border: 1px solid $lightGrey
+    font-family: 'Poppins-Regular'
+    font-size: 12px
+    &::placeholder
+      text-align: center
+
+.search__icon
+  position: absolute
+  right: 56%
+  top: 5px
+
+  &--active
+    right: 95%
+    cursor: pointer
+
+.search__delete
+  position: absolute
+  right: 1%
+  top: 7px
+  opacity: 0
+  visibility: hidden
+  cursor: pointer
+
+  &--active
+    opacity: 1
+    visibility: visible
