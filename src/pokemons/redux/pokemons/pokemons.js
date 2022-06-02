@@ -4,16 +4,20 @@ import { pokemons } from "./../../API/pokemonsApi";
 export const fetchPokemonsList = createAsyncThunk(
   'pokemons/pokemonsAPI', 
   async (ofset, count) => {
+    let urls = [];
     let resultItems = [];
-    const pokemonsList = await pokemons.getPokemons(ofset, count);
-    Promise.all(
-      pokemonsList.results.map(item => {
-        pokemons.getPokemonItem(item.url)
-        .then(response => {
-          resultItems = [...resultItems, response];
-        })
-      })
-    )
+    await pokemons.getPokemons(ofset, count)
+    .then(response => {
+      response.results.map(item => {
+        urls.push(item.url)
+      });
+    });
+    await Promise.allSettled(urls.map(url => pokemons.getPokemonItem(url)))
+    .then(results => { 
+      results.forEach((result) => {
+        resultItems.push(result.value);
+      });
+    });
     return resultItems;
   }
 );
@@ -32,7 +36,6 @@ const pokemonsSlice = createSlice({
     })
     .addCase(fetchPokemonsList.fulfilled, (state, {payload}) => {
       state.status = "fullfield";
-      console.log(payload)
       state.dataItem = payload;
     })
   }
