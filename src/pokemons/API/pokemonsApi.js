@@ -12,6 +12,12 @@ export const pokemons = {
     .then(response => {
       return response.data
     })
+  },
+  getPokemonWithUrl(name) {
+    return axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+    .then(response => {
+      return response.data
+    })
   }
 }
 

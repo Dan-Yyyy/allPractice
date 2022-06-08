@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import React from "react";
 import './PokemonsItem.sass';
 
 export const PokemonsItem = ({name, image, idPokemon, type}) => {

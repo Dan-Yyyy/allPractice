@@ -1,0 +1,33 @@
+@import "./../../variables.sass"
+
+.pokemonItemAbout
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 30%
+  font-family: 'Poppins-Regular'
+  &:after
+    position: absolute
+    content: ''
+    top: 0
+    right: 5px
+    height: 100%
+    border: none
+    border-left: 1px solid $lightGrey
+
+.pokemonItemAbout__container
+  display: flex
+  align-items: center
+  margin-bottom: 5px
+  color: $mainColor
+  font-size: 14px
+  img
+    display: block
+    max-width: 16px
+    margin-right: 8px
+
+.pokemonItemAbout__text
+  color: $mediumGrey
+  font-size: 12px

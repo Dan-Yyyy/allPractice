@@ -1,0 +1,126 @@
+@import "./../../variables.sass"
+
+.pokemonItemBase
+  display: flex
+  align-items: center
+  &--normal
+    .pokemonItemBase__name
+      color: $normal
+    .pokemonItemBase__rowFront
+      background-color: $normal
+  &--water
+    .pokemonItemBase__name
+      color: $water
+    .pokemonItemBase__rowFront
+      background-color: $water
+  &--steel
+    .pokemonItemBase__name
+      color: $steel
+    .pokemonItemBase__rowFront
+      background-color: $steel
+  &--grass
+    .pokemonItemBase__name
+      color: $grass
+    .pokemonItemBase__rowFront
+      background-color: $grass
+  &--psychic
+    .pokemonItemBase__name
+      color: $psychic
+    .pokemonItemBase__rowFront
+      background-color: $psychic
+  &--bug
+    .pokemonItemBase__name
+      color: $bug
+    .pokemonItemBase__rowFront
+      background-color: $bug
+  &--electric
+    .pokemonItemBase__name
+      color: $electric
+    .pokemonItemBase__rowFront
+      background-color: $electric
+  &--fire
+    .pokemonItemBase__name
+      color: $fire
+    .pokemonItemBase__rowFront
+      background-color: $fire
+  &--ghost
+    .pokemonItemBase__name
+      color: $ghost
+    .pokemonItemBase__rowFront
+      background-color: $ghost
+  &--poison
+    .pokemonItemBase__name
+      color: $poison
+    .pokemonItemBase__rowFront
+      background-color: $poison
+  &--flying
+    .pokemonItemBase__name
+      color: $flying
+    .pokemonItemBase__rowFront
+      background-color: $flying
+  &--rock
+    .pokemonItemBase__name
+      color: $rock
+    .pokemonItemBase__rowFront
+      background-color: $rock
+  &--ground
+    .pokemonItemBase__name
+      color: $ground
+    .pokemonItemBase__rowFront
+      background-color: $ground
+  &--fairy
+    .pokemonItemBase__name
+      color: $fairy
+    .pokemonItemBase__rowFront
+      background-color: $fairy
+  &--fighting
+    .pokemonItemBase__name
+      color: $fighting
+    .pokemonItemBase__rowFront
+      background-color: $fighting
+  &--ice
+    .pokemonItemBase__name
+      color: $ice
+    .pokemonItemBase__rowFront
+      background-color: $ice
+  &--dragon
+    .pokemonItemBase__name
+      color: $dragon
+    .pokemonItemBase__rowFront
+      background-color: $dragon
+
+.pokemonItemBase__name
+  width: 42px
+  margin-right: 25px
+  font-family: "Poppins-Bold"
+  font-size: 14px
+  text-align: right
+
+.pokemonItemBase__lavel
+  display: flex
+  align-items: center
+  color: $mainColor
+  font-family: "Poppins-Regular"
+  font-size: 14px
+  span
+    margin-right: 8px
+
+.pokemonItemBase__row
+  position: relative
+  width: 240px
+  height: 4px
+  background-color: $lightGrey
+  border-radius: 8px
+  overflow: hidden
+
+.pokemonItemBase__rowFront
+  position: absolute
+  height: 4px
+  border-radius: 8px
+
+  // &::after
+  //   content: ''
+  //   position: absolute
+  //   height: 100%
+  //   border: none
+  //   border-right: $lightGrey
